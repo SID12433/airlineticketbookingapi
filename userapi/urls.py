@@ -5,7 +5,7 @@ from rest_framework.routers import DefaultRouter
 
 router=DefaultRouter()
 router.register("flights",views.FlightView,basename="flights")
-router.register("userflightlist",views.UserFlights,basename="userflightlist"),
+router.register("bookinghistory",views.UserFlights,basename="bookinghistory"),
 
 urlpatterns = [
     path("register/",views.UserCreateView.as_view(),name="signup"),

@@ -61,6 +61,12 @@ class Booking(models.Model):
     ]
     seat_type=models.CharField(max_length=50,choices=choice,default='Economy')
     amount = models.PositiveIntegerField(null=True)
+    choice=[
+        ('Pending', 'Pending'),
+        ('Completed', 'Completed')
+    ]
+    booking_status=models.CharField(max_length=100,choices=choice,default="Pending")
+    
 
 
     

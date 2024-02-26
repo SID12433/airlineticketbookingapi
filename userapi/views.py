@@ -130,6 +130,7 @@ class UserFlights(ViewSet):
         user_obj=user.objects.get(id=user_id)
         if serializer.is_valid():
             serializer.save(booking=booking_obj,user=user_obj,amount=booking_obj.amount)
+            booking_obj.booking_status="Completed"
             return Response(data=serializer.data)
         else:
             return Response(data=serializer.errors)

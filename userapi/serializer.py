@@ -25,6 +25,7 @@ class FlightSerializer(serializers.ModelSerializer):
 class BookingSerializer(serializers.ModelSerializer):
     flight=serializers.CharField(read_only=True)
     user=serializers.CharField(read_only=True)
+    booking_status=serializers.CharField(read_only=True)
     class Meta:
         model=Booking
         fields="__all__"
