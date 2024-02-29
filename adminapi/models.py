@@ -104,7 +104,7 @@ class Promotion(models.Model):
     valid_to = models.DateField()
 
 class FlightSchedule(models.Model):
-    flight = models.ForeignKey(Flight, on_delete=models.CASCADE)
+    flight = models.ForeignKey(Flight,on_delete=models.CASCADE)
     departure_day = models.CharField(max_length=20)  
     departure_time = models.TimeField()
     arrival_day = models.CharField(max_length=20)  
